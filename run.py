@@ -24,3 +24,10 @@ def display(message):
     This function displays an input string
     """
     print(message)
+
+
+def get_name():
+    """
+    This function identifies the user
+    """
+    display("May I know your name?\n")
