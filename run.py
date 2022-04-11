@@ -31,3 +31,8 @@ def get_name():
     This function identifies the user
     """
     display("May I know your name?\n")
+    ask = input(TIP1)
+
+    if ask != "":
+        if str(ask) == "0":
+            print(TIP2)
