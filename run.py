@@ -11,9 +11,16 @@ TIP2 = "\nYour name has to be filled in, for you to continue"
 
 def say(word):
     """
-This function is for greeting the user
+    This function is for greeting the user
     """
     if word == "Hi" :
         print("\nHii User \n")
     else:
         print("\nGood Bye my friend!\n")
+
+
+def display(message):
+    """
+    This function displays an input string
+    """
+    print(message)
