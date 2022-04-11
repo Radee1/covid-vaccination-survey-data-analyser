@@ -45,3 +45,7 @@ def get_name():
             name = input("\nEnter Your name please!\n")
             print("\nHii "+name+"\n")
             display(WELCOME_MESSAGE)
+
+            # Analysis criteria
+            total_vaccinations = input("\nEnter target number of total vaccinations \n")
+            total_full_vaccinations = input("\nEnter target number of persons fully vaccinations \n")
