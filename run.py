@@ -28,11 +28,20 @@ def display(message):
 
 def get_name():
     """
-    This function identifies the user
+    This function captures the user's initial inputs
+    validates the intial input
+    Captures the users name
+    Captures criteria for analysis
+    validates the criteria for analysis
     """
     display("May I know your name?\n")
-    ask = input(TIP1)
+    ask = input(TIP1)  # This captures the initial input of the user
 
-    if ask != "":
-        if str(ask) == "0":
-            print(TIP2)
+    if ask != "":  # checks if the user input is not empty
+        if  ask == "0":  # is user refuses to provide name
+            print(TIP2)  
+            ask = input(TIP1)
+        elif ask == "1":  # if answer is yes/ user accepts to provide name
+            name = input("\nEnter Your name please!\n")
+            print("\nHii "+name+"\n")
+            display(WELCOME_MESSAGE)
