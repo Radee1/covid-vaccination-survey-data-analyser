@@ -1,31 +1,34 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# COVID-19 Vaccine Survey Data Analyzer (CVSDA)
 
-Welcome USER_NAME,
+## Introduction
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+The CVSDA is a command-line interface application built purely in python, that interacts with a user who avails a CSV (comma separated values) list of covid-19 vaccination data around the world.
 
-## Reminders
+### Application Goal
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+To gather insights from covid-19 vaccination survey data results, as the world recovers from covid and continues to fight against the coronavirus.
 
-## Creating the Heroku app
+### Target Audience
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+* Travelers who might want to tour well vaccinated countries.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+* Researchers of vaccines used globally.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+* International Health organizations tracking global vaccination.
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+* Vaccine Manufacturers tracking vaccines used globally.
 
-Connect your GitHub repository and deploy as normal.
+### User Stories
 
-## Constraints
+* As a Traveler, I want to know which countries have the most vaccinated population.
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+* As a Researcher, I want to know which vaccines have been used the most in the world.
 
------
-Happy coding!
+* As an International Health Organization, we would want to know which countries are vaccinating their populations and with which vaccines.
+
+* As a vaccine manufacturer, I want to know which vaccines are being used on a large scale globally.
+
+## Structure
+-------
+ The features involved in the CVSDA application include the following.
+
