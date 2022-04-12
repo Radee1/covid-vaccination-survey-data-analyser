@@ -11,7 +11,7 @@ w2 = "Survey Data Analyser! \n"
 WELCOME_MESSAGE = w1+w2
 TIP1 = "Press 0 if no, 1 if yes and 2 to quit !\n"
 TIP2 = "\nYour name has to be filled in, for you to continue\n"
-TIP3 = "\nThese results have also been written into inform.csv in the root folder\n"
+TIP3 = "\nThese results have also been written into the shared google sheet\n"
 
 # Functions
 
@@ -104,6 +104,8 @@ def validate():
 
         # write analyzed data to google sheet.
         wks.set_dataframe(df,(1,1))
+
+        display(TIP3)
 
 
     else:
