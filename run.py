@@ -13,6 +13,8 @@ TIP1 = "Press 0 if no, 1 if yes and 2 to quit !\n"
 TIP2 = "\nYour name has to be filled in, for you to continue\n"
 TIP3 = "\nThese results have also been written into inform.csv in the root folder\n"
 
+# Functions
+
 
 def say(word):
     """
@@ -30,6 +32,18 @@ def display(message):
     """
     print(message)
 
+
+# Validate
+
+
+def validate():
+    """
+    Validates the user input
+    compares the criteria
+    loading and writing the data for analysis from the dataset
+    processing and saving analyzed data
+    
+    """
 
 def get_name():
     """
