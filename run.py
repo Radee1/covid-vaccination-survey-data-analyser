@@ -92,23 +92,8 @@ def get_name():
             name = input("\nEnter Your name please!\n")
             print("\nHii "+name+"\n")
             display(WELCOME_MESSAGE)
+            validate()
 
-            
-
-            if total_vaccinations != "" and total_full_vaccinations != "":
-               limit1 = int(total_vaccinations) #turn str to
-               limit2 = int(total_full_vaccinations)
-            else:
-               print("\nINVALID ANSWERs\n")
-               display("Do you want to continue?\n")
-               ask = input(TIP1)
-
-            display("\n COUNTRIES THAT HAVE OVER "+total_vaccinations+" TOTAL_VACCINATIONS AND OVER "+total_full_vaccinations+
-            " FULLY_VACCINATED PEOPLE\n")
-            
-            display("\nThese results have also been written into inform.csv in the root folder\n")
-            print("Nice working with you "+name) #say bye to the user
-            say("Bye")
 
         elif ask == "2":
             say("Bye")
