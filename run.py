@@ -38,6 +38,7 @@ def display(message):
 
 def validate():
     """
+    Captures user name
     Validates the user input
     compares the criteria
     loading and writing the data for analysis from the dataset
@@ -46,9 +47,12 @@ def validate():
     """
     name = input("\nEnter Your name please!\n")
 
-    if len(name)>4:
+    if len(name) > 4:
         print("\nHii "+name+"\n")
         display(WELCOME_MESSAGE)
+
+        data = pd.read_csv('data.csv')
+
     else:
         print("\nAtleast 5 characters needed, please try again \n")
         validate()
