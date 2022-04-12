@@ -67,6 +67,22 @@ def validate():
             print("\nINVALID ANSWERs\n")
             display("Do you want to continue?\n")
             ask = input(TIP1)
+        
+        # Filter the data accordingly.
+        
+        data = data[data['TOTAL_VACCINATIONS'] > limit1]
+        data = data[data['PERSONS_FULLY_VACCINATED'] > limit2]
+
+        data.to_csv('filtered-data.csv', index=False)  # create filtered csv
+        d1 = pd.read_csv('filtered-data.csv')  # read filtered data
+        filtered_data = d1
+        filtered_data = filtered_data[['COUNTRY', 'TOTAL_VACCINATIONS', 'PERSONS_FULLY_VACCINATED',
+        'VACCINES_USED']].sort_values(by="TOTAL_VACCINATIONS", ascending=False)
+        filtered_data.to_csv('inform.csv', index=False)  # write informative csv
+        data1 = pd.read_csv('inform.csv')  # read informed csv
+        display("\n COUNTRIES THAT HAVE OVER " + total_vaccinations + " TOTAL_VACCINATIONS AND OVER " + total_full_vaccinations +
+        " FULLY_VACCINATED PEOPLE\n")
+        print(data1)
 
     else:
         print("\nAtleast 5 characters needed, please try again \n")
