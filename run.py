@@ -93,8 +93,11 @@ def validate():
         df = pd.DataFrame()
 
         # save analyzed data
-        
+
         df= data1 # write informative csv
+
+        # open the google spreadsheet (where 'Covid-data.csv' is the name of my sheet)
+        sh = google_credentials.open('Covid-data.csv')
 
     else:
         print("\nAtleast 5 characters needed, please try again \n")
