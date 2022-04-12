@@ -44,6 +44,14 @@ def validate():
     processing and saving analyzed data
     
     """
+    name = input("\nEnter Your name please!\n")
+
+    if len(name)>4:
+        print("\nHii "+name+"\n")
+        display(WELCOME_MESSAGE)
+    else:
+        print("\nAtleast 5 characters needed, please try again \n")
+        validate()
 
 def get_name():
     """
