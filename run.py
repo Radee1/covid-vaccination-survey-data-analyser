@@ -106,6 +106,8 @@ def validate():
         wks.set_dataframe(df,(1,1))
 
         display(TIP3)
+        print("Nice working with you "+name)  # say bye to the user
+        say("Bye")
 
 
     else:
