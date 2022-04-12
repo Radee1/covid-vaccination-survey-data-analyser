@@ -60,6 +60,14 @@ def validate():
         total_vaccinations = i1
         total_full_vaccinations = i2
 
+        if total_vaccinations != "" and total_full_vaccinations != "":
+            limit1 = int(total_vaccinations)  # turn str to integer
+            limit2 = int(total_full_vaccinations)
+        else:
+            print("\nINVALID ANSWERs\n")
+            display("Do you want to continue?\n")
+            ask = input(TIP1)
+
     else:
         print("\nAtleast 5 characters needed, please try again \n")
         validate()
