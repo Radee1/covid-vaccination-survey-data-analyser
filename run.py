@@ -109,7 +109,6 @@ def validate():
         print("Nice working with you "+name)  # say bye to the user
         say("Bye")
 
-
     else:
         print("\nAtleast 5 characters needed, please try again \n")
         validate()
