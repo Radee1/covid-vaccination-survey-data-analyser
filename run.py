@@ -116,34 +116,26 @@ def validate():
 def get_name():
     """
     This function captures the user's initial inputs
-    validates the intial input
-    Captures the users name
-    Captures criteria for analysis
-    validates the criteria for analysis
+    
     """
     display("May I know your name?\n")
-    ask = input(TIP1)  # This captures the initial input of the user
+    ask = input(INFO1)
 
-    if ask != "":  # checks if the user input is not empty
-        if  ask == "0":  # if user refuses to provide name
-            print(TIP2)  
-            ask = input(TIP1)
-
-        elif ask == "1":  # if answer is yes/ user accepts to provide name
-            name = input("\nEnter Your name please!\n")
-            print("\nHii "+name+"\n")
-            display(WELCOME_MESSAGE)
+    if ask != "":
+        if str(ask) == "0":
+            print(INFO2)
+            get_name()
+        elif ask == "1":
             validate()
-
-
         elif ask == "2":
-            say("Bye")
+            say("Bye ")
         else:
-            print("\nInvalid answer, please try again \n")
+            print("\nInvalid entry, please try again \n")
             get_name()
     else:
-        print(TIP2)
-        ask = input(TIP1)
+        print(INFO2)
+        ask = input(INFO1)
         get_name()
+        
 say("Hi")
 get_name()
