@@ -119,11 +119,11 @@ def get_name():
     
     """
     display("May I know your name?\n")
-    ask = input(INFO1)
+    ask = input(TIP1)
 
     if ask != "":
         if str(ask) == "0":
-            print(INFO2)
+            print(TIP2)
             get_name()
         elif ask == "1":
             validate()
@@ -133,9 +133,10 @@ def get_name():
             print("\nInvalid entry, please try again \n")
             get_name()
     else:
-        print(INFO2)
-        ask = input(INFO1)
+        print(TIP2)
+        ask = input(TIP1)
         get_name()
-        
+
+
 say("Hi")
 get_name()
