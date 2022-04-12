@@ -88,6 +88,14 @@ def validate():
 
         google_credentials = pygsheets.authorize(service_file='creds.json')
 
+        # Create empty dataframe
+
+        df = pd.DataFrame()
+
+        # save analyzed data
+        
+        df= data1 # write informative csv
+
     else:
         print("\nAtleast 5 characters needed, please try again \n")
         validate()
