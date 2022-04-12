@@ -99,6 +99,13 @@ def validate():
         # open the google spreadsheet (where 'Covid-data.csv' is the name of my sheet)
         sh = google_credentials.open('Covid-data.csv')
 
+        # select the first sheet
+        wks = sh[0]
+
+        # write analyzed data to google sheet.
+        wks.set_dataframe(df,(1,1))
+
+
     else:
         print("\nAtleast 5 characters needed, please try again \n")
         validate()
