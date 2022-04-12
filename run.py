@@ -53,6 +53,13 @@ def validate():
 
         data = pd.read_csv('data.csv')
 
+        # Analysis criteria
+        
+        i1 = input("\nEnter target number of total vaccinations \n")
+        i2 = input("\nEnter target number of persons fully vaccinations\n")
+        total_vaccinations = i1
+        total_full_vaccinations = i2
+
     else:
         print("\nAtleast 5 characters needed, please try again \n")
         validate()
