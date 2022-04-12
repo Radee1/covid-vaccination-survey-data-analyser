@@ -4,7 +4,7 @@
 """
 This is a welcome message
 """
-WELCOME_MESSAGE = "\nWelcome to the Covid-19 Vaccination Survey Data Analyser Command Line Interface! \n"
+WELCOME_MESSAGE = "\nWelcome to the Covid-19 Vaccination Survey Data Analyser! \n"
 TIP1 = "Press 0 if no, 1 if yes and 2 to quit !\n"
 TIP2 = "\nYour name has to be filled in, for you to continue"
 
@@ -49,3 +49,30 @@ def get_name():
             # Analysis criteria
             total_vaccinations = input("\nEnter target number of total vaccinations \n")
             total_full_vaccinations = input("\nEnter target number of persons fully vaccinations \n")
+
+            if total_vaccinations != "" and total_full_vaccinations != "":
+               limit1 = int(total_vaccinations) #turn str to
+               limit2 = int(total_full_vaccinations)
+            else:
+               print("\nINVALID ANSWERs\n")
+               display("Do you want to continue?\n")
+               ask = input(TIP1)
+
+            display("\n COUNTRIES THAT HAVE OVER "+total_vaccinations+" TOTAL_VACCINATIONS AND OVER "+total_full_vaccinations+
+            " FULLY_VACCINATED PEOPLE\n")
+            
+            display("\nThese results have also been written into inform.csv in the root folder\n")
+            print("Nice working with you "+name) #say bye to the user
+            say("Bye")
+
+        elif ask == "2":
+            say("Bye ")
+        else:
+            print("\nInvalid answer, please try again \n")
+            get_name()
+    else:
+        print(INFO2)
+        ask = input(INFO1)
+        get_name()
+say("Hi")
+get_name()
