@@ -86,7 +86,7 @@ def validate():
 
         # google authorization
 
-        gc = pygsheets.authorize(service_file='creds.json')
+        google_credentials = pygsheets.authorize(service_file='creds.json')
 
     else:
         print("\nAtleast 5 characters needed, please try again \n")
