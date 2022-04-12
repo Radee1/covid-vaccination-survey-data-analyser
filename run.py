@@ -54,7 +54,7 @@ def validate():
         data = pd.read_csv('data.csv')
 
         # Analysis criteria
-        
+
         i1 = input("\nEnter target number of total vaccinations \n")
         i2 = input("\nEnter target number of persons fully vaccinations\n")
         total_vaccinations = i1
@@ -85,9 +85,7 @@ def get_name():
             print("\nHii "+name+"\n")
             display(WELCOME_MESSAGE)
 
-            # Analysis criteria
-            total_vaccinations = input("\nEnter target number of total vaccinations \n")
-            total_full_vaccinations = input("\nEnter target number of persons fully vaccinated \n")
+            
 
             if total_vaccinations != "" and total_full_vaccinations != "":
                limit1 = int(total_vaccinations) #turn str to
