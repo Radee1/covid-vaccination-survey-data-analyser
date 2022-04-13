@@ -32,3 +32,10 @@ To gather insights from covid-19 vaccination survey data results, as the world r
 -------
  The features involved in the CVSDA application include the following.
 
+** The main menu**
+
+* The user is prompted to identify him/herself before he/she can access the data analysis module of the application.
+
+![The main menu](assets/mainmenu.PNG)
+
+**
