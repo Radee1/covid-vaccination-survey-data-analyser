@@ -38,4 +38,32 @@ To gather insights from covid-19 vaccination survey data results, as the world r
 
 ![The main menu](assets/mainmenu.PNG)
 
-**
+** Enter Zero **
+
+* The option allows the user to select no as an answer after request by the application to enter name. With this option, the application with further prompt the user to enter their name if they are to continue using the application.
+
+![Option zero](assets/enter0.PNG)
+
+** Enter Two **
+
+* The option 2 allows the user to quit using the application in case they do not feel like providing their name or credentials to the application.
+
+![Option Two](assets/enter2.PNG)
+
+** Enter One **
+
+* The option 1 allows the user to enter their name after which they can proceed to analyze the covid data based on what numbers they choose as criteria.
+
+![Option One](assets/enter1.PNG)
+
+** Name Validation**
+
+The application checks the input that is manually input by the user. The application then goes a head to check that the name input by the user has at least 5 characters. Anything less than the 5 charachters returns a message requesting for the user to set the name to right number of characters.
+
+![name validation](assets/5characters.PNG)
+
+** Data Analysis**
+
+* The application allows the user to enter data in the form of intergers or numbers for analysis after the user has provided the correct name format. If the user provides anything other than that, the application returns a message indicating invalid input.
+
+![invalid input](assets/)
