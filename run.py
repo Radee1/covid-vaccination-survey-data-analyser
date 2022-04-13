@@ -61,8 +61,14 @@ def validate():
         total_full_vaccinations = i2
 
         if total_vaccinations != "" and total_full_vaccinations != "":
-            limit1 = int(total_vaccinations)  # turn str to integer
-            limit2 = int(total_full_vaccinations)
+            if total_vaccinations.isdigit() and total_full_vaccinations.isdigit():
+                limit1 = int(total_vaccinations)  # turn str to
+                limit2 = int(total_full_vaccinations)
+            else:
+                print("\nBoth targets should be valid numbers")
+                limit1 = 0
+                limit2 = 0
+                validate()
         else:
             print("\nINVALID ANSWERs\n")
             limit1 = 0
