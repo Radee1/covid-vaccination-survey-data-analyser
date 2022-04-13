@@ -1,6 +1,6 @@
 # COVID-19 Vaccine Survey Data Analyzer (CVSDA)
 
-## Introduction
+1. ## Introduction
 
 The CVSDA is a command-line interface application built purely in python, that interacts with a user who avails a CSV (comma separated values) list of covid-19 vaccination data around the world.
 
@@ -28,7 +28,7 @@ To gather insights from covid-19 vaccination survey data results, as the world r
 
 * As a vaccine manufacturer, I want to know which vaccines are being used on a large scale globally.
 
-## Structure
+2. ## Structure
 -------
  The features involved in the CVSDA application include the following.
 
@@ -38,7 +38,7 @@ To gather insights from covid-19 vaccination survey data results, as the world r
 
 ![The main menu](assets/mainmenu.PNG)
 
-** Enter Zero **
+1. ** Enter Zero **
 
 * The option allows the user to select no as an answer after request by the application to enter name. With this option, the application with further prompt the user to enter their name if they are to continue using the application.
 
@@ -82,7 +82,7 @@ The application checks the input that is manually input by the user. The applica
 
 ![The final](assets/finalresultandmessage.PNG)
 
-## Logical Flow
+3. ## Logical Flow
 ----------
 
 ** The Overview flow chart**
@@ -99,7 +99,7 @@ The application checks the input that is manually input by the user. The applica
 
 ** The process of analyzing data flow chart **
 
-## Testing and Validation
+4. ## Testing and Validation
 ---------
 ** Testing **
 
@@ -115,3 +115,54 @@ The application checks the input that is manually input by the user. The applica
 ![pep8 validation](assets/Pep8%20results.PNG)
 
 ### Bugs and fixes
+
+![ the Bug](assets/Bug1.PNG)
+
+* The bug was fixed by adding validations in both the validate and analyze functions.
+
+5. ## Deployment
+---------
+### version control
+
+* The site was created using the Visual Studio Code editor and pushed to github to the remote repository covid-vaccination-survey-data-analyser.
+
+The following git commands were used throughout development to push code to the remote repo:
+
+* git add <file> - This command was used to add the file(s) to the staging area before they are committed.
+
+* git commit -m "commit message" - This command was used to commit changes to the local repository queue ready for the final step.
+
+* git push - This command was used to push all committed code to the remote repository on github.
+
+### Heroku Deployment
+
+The following steps were followed to deploy this project to Heroku:
+
+* Go to Heroku and click "New" to create a new app.
+
+* Choose an app name and region region, click "Create app"
+
+* Go to "Settings" and navigate to Config Vars. Add the following config variables:
+   * PORT : 8000
+* Navigate to Buildpacks and add buildpacks for Python and NodeJS (in that order).
+
+* Navigate to "Deploy". Set the deployment method to Github and enter repository name and connect.
+
+* Scroll down to Manual Deploy, select "main" branch and click "Deploy Branch".
+
+* The app will now be deployed to heroku
+
+6. ## Credits
+-------
+* W3C Schhols for functions usednin this python command line terminal application https://www.w3schools.com/python/python_functions.asp
+
+* You tube tutorials on how to import library in python https://www.youtube.com/watch?v=h0oRPIlnJYQ
+
+* Lecture/ course videos on how to deploy the application
+
+* Covid data sent obatined from world health organization https://covid19.who.int/
+
+* Fixed some pep8 validation errors using stack overflow https://stackoverflow.com/questions/492387/indentationerror-unindent-does-not-match-any-outer-indentation-level
+
+
+
