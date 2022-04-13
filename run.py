@@ -65,8 +65,9 @@ def validate():
             limit2 = int(total_full_vaccinations)
         else:
             print("\nINVALID ANSWERs\n")
-            display("Do you want to continue?\n")
-            ask = input(TIP1)
+            limit1 = 0
+            limit2 = 0
+            validate()
 
         # Filter the data accordingly.
 
