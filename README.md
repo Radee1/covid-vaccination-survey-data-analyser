@@ -164,5 +164,7 @@ The following steps were followed to deploy this project to Heroku:
 
 * Fixed some pep8 validation errors using stack overflow https://stackoverflow.com/questions/492387/indentationerror-unindent-does-not-match-any-outer-indentation-level
 
+* the logical diagrams are illustrated using Lucid charts https://www.lucidchart.com/pages/
+
 
 
