@@ -64,6 +64,54 @@ The application checks the input that is manually input by the user. The applica
 
 ** Data Analysis**
 
-* The application allows the user to enter data in the form of intergers or numbers for analysis after the user has provided the correct name format. If the user provides anything other than that, the application returns a message indicating invalid input.
+* The application allows the user to enter data in the form of intergers or numbers for analysis after the user has provided the correct name format. After identifying the user with a username, the application prompts the user to enter criteria for analysis on the provided data set. If the user provides anything other than that, the application returns a message indicating invalid input.
 
-![invalid input](assets/)
+![invalid input](assets/invalidanswers.PNG)
+
+** results **
+
+* The criteria is in the form of integers representing a target number that has to be met, that is, the number of vaccinations carried out by countries in the survey data and also the number of fully vaccinated people in the participating countries.
+
+![The results](assets/results.PNG)
+
+** Analyzed file and closing message **
+
+* The application then analyzes and iterates through each line of the provided data set for countries that meet the user’s desired criteria, compiles and displays a list of these countries in descending order by the total vaccinations carried out.
+
+* The compiled list is then written as a csv file in a google sheet where it can be accessed by an authorized user or administrator and the program comes to an end.
+
+![The final](assets/finalresultandmessage.PNG)
+
+## Logical Flow
+----------
+
+** The Overview flow chart**
+
+![The overview](assets/Overview%20Flowchart.png)
+
+** The Break down of Getting Username flow chart **
+
+![The getting name chart](assets/Getting%20username%20Flowchart.png)
+
+** The Criteria for analysis flow chart **
+
+![The criteria chart](assets/Criteria%20for%20analysis%20Flowchart.png)
+
+** The process of analyzing data flow chart **
+
+## Testing and Validation
+---------
+** Testing **
+
+* The application was tested considering the different user inputs. The username was tested to ensure that it has at least 5 characters or more. Anything below that returned an invalid message.
+
+* The analysis application was also tested to ensure that only numbers were entered by the users and the application passed successfully.
+
+* The application returns the correct data for total vaccinations and total number of persons vaccinated based on the criteria provided by the user.
+
+** Pep8 Validation **
+* All python code was ran through pep8online.com validator and any warnings or errors were fixed. Code then validated successfully.
+
+![pep8 validation](assets/Pep8%20results.PNG)
+
+### Bugs and fixes
