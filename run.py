@@ -1,6 +1,6 @@
 # importing the required libraries
 import pandas as pd
-import pygsheets 
+import pygsheets
 
 # Contants
 """
@@ -20,7 +20,7 @@ def say(word):
     """
     This function is for greeting the user
     """
-    if word == "Hi" :
+    if word == "Hi":
         print("\nHii User \n")
     else:
         print("\nGood Bye my friend!\n")
@@ -43,7 +43,7 @@ def validate():
     compares the criteria
     loading and writing the data for analysis from the dataset
     processing and saving analyzed data
-    
+
     """
     name = input("\nEnter Your name please!\n")
 
@@ -67,7 +67,7 @@ def validate():
             print("\nINVALID ANSWERs\n")
             display("Do you want to continue?\n")
             ask = input(TIP1)
-        
+
         # Filter the data accordingly.
 
         data = data[data['TOTAL_VACCINATIONS'] > limit1]
@@ -76,12 +76,18 @@ def validate():
         data.to_csv('filtered-data.csv', index=False)  # create filtered csv
         d1 = pd.read_csv('filtered-data.csv')  # read filtered data
         filtered_data = d1
-        filtered_data = filtered_data[['COUNTRY', 'TOTAL_VACCINATIONS', 'PERSONS_FULLY_VACCINATED',
-        'VACCINES_USED']].sort_values(by="TOTAL_VACCINATIONS", ascending=False)
-        filtered_data.to_csv('inform.csv', index=False)  # write informative csv
+        f_d = ['COUNTRY', 'TOTAL_VACCINATIONS',
+               'PERSONS_FULLY_VACCINATED', 'VACCINES_USED']
+        fd1 = "TOTAL_VACCINATIONS"
+        filtered_data = filtered_data[f_d].sort_values(by=fd1, ascending=False)
+
+        # write informative csv
+
+        filtered_data.to_csv('inform.csv', index=False)
         data1 = pd.read_csv('inform.csv')  # read informed csv
-        display("\n COUNTRIES THAT HAVE OVER " + total_vaccinations + " TOTAL_VACCINATIONS AND OVER " + total_full_vaccinations +
-        " FULLY_VACCINATED PEOPLE\n")
+        display("\n COUNTRIES THAT HAVE OVER " + total_vaccinations +
+                " TOTAL_VACCINATIONS AND OVER " + total_full_vaccinations +
+                " FULLY_VACCINATED PEOPLE\n")
         print(data1)
 
         # google authorization
@@ -94,16 +100,16 @@ def validate():
 
         # save analyzed data
 
-        df= data1 # write informative csv
+        df = data1  # write informative csv
 
-        # open the google spreadsheet (where 'Covid-data.csv' is the name of my sheet)
+        # open the google spreadsheet
         sh = google_credentials.open('Covid-data.csv')
 
         # select the first sheet
         wks = sh[0]
 
         # write analyzed data to google sheet.
-        wks.set_dataframe(df,(1,1))
+        wks.set_dataframe(df, (1, 1))
 
         display(TIP3)
         print("Nice working with you "+name)  # say bye to the user
@@ -113,10 +119,11 @@ def validate():
         print("\nAtleast 5 characters needed, please try again \n")
         validate()
 
+
 def get_name():
     """
     This function captures the user's initial inputs
-    
+
     """
     display("May I know your name?\n")
     ask = input(TIP1)
